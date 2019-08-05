@@ -3,10 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Post;
-use App\Quote;
 
-class PostController extends Controller
+class AuthorController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,18 +13,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        $posts = Post::all();
-        $quotes = Quote::all();
-        return view('posts.index', compact(['posts', 'quotes']));
-    }
-
-
-    public function search($str, Request $request) {
-        $results = Post::where('body', 'like', '%'.$request->input('fragment').'%')
-            ->orWhere('title', 'like', '%'.$request->input('fragment').'%')->get();
-        $fragment = $request->input('fragment');
-        $quotes = Quote::paginate(5);
-        return view('posts.search_results', compact(['results', 'quotes', 'fragment']));
+        //
     }
 
     /**
@@ -58,26 +45,7 @@ class PostController extends Controller
      */
     public function show($id)
     {
-
-
-        $post = Post::where('id', $id)->first();
-        $nextPost = Post::where('id', $id+1)->first();
-        $prevPost = Post::where('id', $id-1)->first();
-        $quotes = Quote::all();
-
-        $req = Request();
-
-        if(session()->previousUrl() !== route('posts.show', $id)){
-            $post->hits += 1;
-            $post->save();
-        }
-
-        return view('posts.show', compact([
-            'post',
-            'quotes',
-            'nextPost',
-            'prevPost'
-        ]));
+        //
     }
 
     /**

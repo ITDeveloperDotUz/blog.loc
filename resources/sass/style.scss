@@ -688,9 +688,10 @@ select {
 .media-left {
   padding-right: 15px;
   float: left;
+  max-width: 40%;
 }
 .media {
-  >.pull-left {
+  >.float-left {
     padding-right: 15px;
     float: left;
   }
@@ -1978,6 +1979,7 @@ footer {
           border: 7px solid #fff;
           border-radius: 50%;
           margin-top: 40px;
+          max-width: 70%;
         }
       }
     }
@@ -2006,7 +2008,7 @@ footer {
     }
   }
   .widget.news-letter-widget {
-    input[type="email"] {
+    input {
       width: 100%;
       margin-bottom: 14px;
       color: $color_13;

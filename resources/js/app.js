@@ -194,6 +194,19 @@ $(document).ready(function () {
         nextArrow: $('.testimonials-next')
     });
 
+
+
+    $('#related_posts').slick({
+        dots: true,
+        arrows: false,
+        infinite: true,
+        autoplay: true,
+        autoplaySpeed: 6000,
+        speed: 800,
+        slidesToShow: 3,
+        adaptiveHeight: true,
+    });
+
     $('#blog0gallery-slick').slick({
         infinite: true,
         autoplay: true,

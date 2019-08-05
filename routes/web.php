@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'SiteController@index')->name('home');
 
 
 Route::group(['prefix' => 'admin'], function () {
@@ -21,3 +19,6 @@ Route::group(['prefix' => 'admin'], function () {
 });
 
 Route::resource('posts', 'PostController');
+Route::post('posts/{string}/search', 'PostController@search')->name('posts.search');
+Route::resource('authors', 'AuthorController');
+Route::resource('comments', 'CommentsController');

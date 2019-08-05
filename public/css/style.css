@@ -566,9 +566,10 @@ select:active {
 .media-left {
   padding-right: 15px;
   float: left;
+  max-width: 40%;
 }
 
-.media > .pull-left {
+.media > .float-left {
   padding-right: 15px;
   float: left;
 }
@@ -1703,6 +1704,7 @@ footer .ft-copyright p a:hover {
   border: 7px solid #fff;
   border-radius: 50%;
   margin-top: 40px;
+  max-width: 70%;
 }
 .kotha-sidebar .widget.about-me-widget .social-share ul li {
   padding: 0;
@@ -1723,7 +1725,7 @@ footer .ft-copyright p a:hover {
   border-color: #da521e;
   color: #fff;
 }
-.kotha-sidebar .widget.news-letter-widget input[type=email] {
+.kotha-sidebar .widget.news-letter-widget input {
   width: 100%;
   margin-bottom: 14px;
   color: #b6b6b6;
@@ -1735,7 +1737,7 @@ footer .ft-copyright p a:hover {
   border-radius: 0;
   background: #fafafa;
 }
-.kotha-sidebar .widget.news-letter-widget input[type=email]:focus {
+.kotha-sidebar .widget.news-letter-widget input:focus {
   border-color: #da521e;
 }
 .kotha-sidebar .widget.news-letter-widget .btn-subscribe {
