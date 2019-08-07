@@ -10,16 +10,19 @@
     <!-- Fonts -->
 
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    {{--<link rel="stylesheet" href="{{ asset('css/style.css') }}">--}}
     <link rel="stylesheet" href="{{ asset('css/slick-theme.css') }}">
     <link rel="stylesheet" href="{{ asset('css/slick.css') }}">
 </head>
 <body>
 <div id="app">
-    <header class="kotha-menu marketing-menu">
-
-        <nav class="navbar navbar-expand-md navbar-light bg-light">
-
+    <header class="">
+        <h1>Sticky Header Pow!</h1>
+        <nav class="">
+            <a href="">Home</a>
+            <a href="">About</a>
+            <a href="">Gallery</a>
+            <a href="">Contact</a>
             <div class="container">
                 <div class="">
                     <!-- Brand and toggle get grouped for better mobile display -->
@@ -105,9 +108,10 @@
 
         </div>
     </header>
-    @yield('banner')
-    <div class="kotha-default-content material-blog">
-        <div class="container">
+
+    <div class="wrapper">
+        @yield('banner')>
+        <div class="container"
             <div class="row">
                 @yield('content')
                 @include('layouts.sidebar')

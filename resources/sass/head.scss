@@ -1,0 +1,74 @@
+//@import "compass/css3";
+
+//@import "compass/css3";
+//@import "compass/reset";
+
+$offset: 600px;
+
+@mixin transition($prop){
+  -moz-transition: $prop;
+  -o-transition: $prop;
+  -webkit-transition: $prop;
+  transition: $prop;
+}
+
+@mixin scale($from){
+  -moz-transform: scale($from, $from);
+  -ms-transform: scale($from, $from);
+  -webkit-transform: scale($from, $from);
+  transform: scale($from, $from);
+}
+
+.wrapper {
+  margin-top: 50px;
+  padding-top: $offset;
+  @include transition(all .5s ease);
+}
+
+header{
+  background: url('../img/marketing-features-1.jpg') no-repeat fixed 50% 50%;
+  -webkit-background-size: cover;
+  background-size: cover;
+  width: 100%;
+  height: $offset;
+  background-color: #3498db;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  overflow: hidden;
+  z-index: 10;
+  @include transition(all .5s ease);
+  h1{
+    font-size: 42px;
+    color: #fff;
+    line-height: 230px;
+    text-transform: uppercase;
+    font-weight: 100;
+    @include transition(all .3s ease);
+  }
+  nav{
+    position: absolute;
+    bottom: 0;
+    height: 60px;
+    line-height: 60px;
+    width: 100%;
+    background-color: rgba(0,0,0,.1);
+
+  }
+}
+/* Sticky Header Style */
+/* ---------------------------------------- */
+.sticky-header{
+  padding-top: 100px;
+  header{
+    height: 60px;
+    background-color: rgba(52,152,219,.9);
+    h1{
+      @include scale(0);
+    }
+  }
+}
+
+.wrapper-padding {
+  padding-top: 130px;
+}

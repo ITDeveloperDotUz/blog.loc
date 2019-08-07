@@ -6,7 +6,7 @@
 
 require('./bootstrap');
 
-window.Vue = require('vue');
+//window.Vue = require('vue');
 window.$ = require('jquery');
 window.slick = require('slick-carousel');
 window.masonry = require('masonry-layout');
@@ -23,7 +23,7 @@ window.isotope = require('isotope-layout');
 // const files = require.context('./', true, /\.vue$/i);
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default));
 
-Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+//Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -31,9 +31,9 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-const app = new Vue({
-    el: '#app',
-});
+// const app = new Vue({
+//     el: '#app',
+// });
 
 
 
@@ -154,6 +154,7 @@ $(document).ready(function () {
     }());
 
 
+
     (function () {
         $('.popular-post-slider').not('.slick-initialized').slick({
             infinite: true,
@@ -194,7 +195,22 @@ $(document).ready(function () {
         nextArrow: $('.testimonials-next')
     });
 
-
+    $(function(){
+        $(window).scroll(function(){
+            scrolls();
+        });
+        scrolls();
+        function scrolls(){
+            var winTop = $(window).scrollTop();
+            if(winTop >= 30){
+                $("#app").addClass("sticky-header");
+                $('.wrapper').addClass('wrapper-padding');
+            }else{
+                $("#app").removeClass("sticky-header");
+                $('.wrapper').removeClass('wrapper-padding');
+            }
+        }
+    });
 
     $('#related_posts').slick({
         dots: true,
@@ -238,28 +254,28 @@ $(document).ready(function () {
             });
         });
     }());
-    (function () {
-        if (screen.width > 768) {
-            var $dropdown = $(".nav .dropdown");
-            $dropdown.mousemove(function () {
-                $(this).addClass("open");
-            });
-            $dropdown.mouseleave(function () {
-                $dropdown.removeClass("open");
-            });
-        }
-        $('ul.dropdown-menu [data-toggle=dropdown]').on('click', function (event) {
-            // Avoid following the href location when clicking
-            event.preventDefault();
-            // Avoid having the menu to close when clicking
-            event.stopPropagation();
-            // Re-add .open to parent sub-menu item
-            $(this).parent().addClass('open');
-            $(this).parent().find("ul").parent().find("li.dropdown").toggle('open');
-            /* $(this).parent().find("ul").parent().find("li.dropdown").removeClass('open');*/
-
-        });
-    }());
+    // (function () {
+    //     if (screen.width > 768) {
+    //         var $dropdown = $(".nav .dropdown");
+    //         $dropdown.mousemove(function () {
+    //             $(this).addClass("open");
+    //         });
+    //         $dropdown.mouseleave(function () {
+    //             $dropdown.removeClass("open");
+    //         });
+    //     }
+    //     $('ul.dropdown-menu [data-toggle=dropdown]').on('click', function (event) {
+    //         // Avoid following the href location when clicking
+    //         event.preventDefault();
+    //         // Avoid having the menu to close when clicking
+    //         event.stopPropagation();
+    //         // Re-add .open to parent sub-menu item
+    //         $(this).parent().addClass('open');
+    //         $(this).parent().find("ul").parent().find("li.dropdown").toggle('open');
+    //         /* $(this).parent().find("ul").parent().find("li.dropdown").removeClass('open');*/
+    //
+    //     });
+    // }());
     //scroll top
 
     (function () {

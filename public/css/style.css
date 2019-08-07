@@ -39,7 +39,7 @@ Version: 2.0
 }
 
 .features-content {
-  background: url(/images/marketing-features-1.jpg?e0f22da746b6cc68a706b9040c8c32e1) no-repeat fixed 50% 50%;
+  background: url("../img/marketing-features-1.jpg") no-repeat fixed 50% 50%;
   background-size: cover;
   margin-top: -20px;
   width: 100%;
@@ -395,7 +395,7 @@ body.food .insta-feed {
   box-shadow: 0 -1px 1px rgba(216, 74, 17, 0.2);
 }
 body.food .kotha-sidebar .widget.about-me-widget {
-  background: url(/images/food-me-bg.jpg?69b3efcc26dd98ee0e9b064b241a8a18) no-repeat;
+  background: url("../img/food-me-bg.jpg") no-repeat;
   background-color: #fff;
 }
 
@@ -636,13 +636,13 @@ select:active {
   color: #fff;
 }
 .blog-carousel .single-carousel.one {
-  background: url(/images/blog-carousel-1.jpg?1f2fb7c1ac05b487f36c9fa7d67f7223) no-repeat;
+  background: url("../img/blog-carousel-1.jpg") no-repeat;
 }
 .blog-carousel .single-carousel.two {
-  background: url(/images/blog-carousel-2.jpg?2568e7f0a297056cb22e54840bd3c864) no-repeat;
+  background: url("../img/blog-carousel-2.jpg") no-repeat;
 }
 .blog-carousel .single-carousel.three {
-  background: url(/images/blog-carousel-3.jpg?fd8ea35880574d9ccf0416b2ce7808f2) no-repeat;
+  background: url("../img/blog-carousel-3.jpg") no-repeat;
 }
 .blog-carousel .carousel-control.left {
   background: none;
@@ -1227,236 +1227,6 @@ select:active {
   border-radius: 2px;
 }
 
-.kotha-menu .navbar-default .navbar-toggle {
-  border-color: transparent;
-}
-.kotha-menu .navbar-default .navbar-nav > .open > a {
-  background-color: transparent;
-}
-.kotha-menu .navbar-default .navbar-nav > .open > a:focus {
-  background-color: transparent;
-}
-.kotha-menu .navbar-default .navbar-nav > .open > a:hover {
-  background-color: transparent;
-}
-.kotha-menu .menu-content {
-  position: relative;
-  padding: 0;
-}
-.kotha-menu .navbar-collapse {
-  padding-right: 0;
-  padding-left: 0;
-}
-.kotha-menu .navbar-brand {
-  padding: 21px 15px;
-}
-.kotha-menu .navbar {
-  border-radius: 0;
-}
-.kotha-menu .navbar .navbar-nav {
-  margin-right: 25px;
-}
-.kotha-menu .navbar .navbar-nav li a {
-  color: #444;
-  font-weight: bold;
-  font-size: 11px;
-  padding: 20px 12px;
-  letter-spacing: 1px;
-}
-.kotha-menu .navbar .navbar-nav li a:hover {
-  color: #da521e;
-}
-.kotha-menu .navbar .navbar-nav li .dropdown-menu {
-  margin: 0;
-  border-radius: 0;
-  padding: 0;
-  border: 0;
-  min-width: 200px;
-  box-shadow: none;
-}
-.kotha-menu .navbar .navbar-nav li .dropdown-menu .dropdown-menu {
-  top: 0;
-  left: 100%;
-  border-radius: 0;
-}
-.kotha-menu .navbar .navbar-nav li .dropdown-menu .dropdown-menu li a {
-  border-left: 0;
-}
-.kotha-menu .navbar .navbar-nav li .dropdown-menu > li {
-  padding: 0;
-  margin: 0;
-}
-.kotha-menu .navbar .navbar-nav li .dropdown-menu > li > a {
-  display: block;
-  padding: 14px 12px;
-  margin: 0;
-  background: #fff;
-}
-.kotha-menu .navbar .navbar-nav li .dropdown-menu > li > a:hover {
-  color: #fff;
-  background: #da521e;
-  border-color: transparent;
-}
-.kotha-menu .navbar .navbar-nav .dropdown li:first-child > a {
-  border-top: 1px solid #e2e2e2;
-}
-.kotha-menu .navbar .navbar-nav .dropdown li a {
-  border-bottom: 1px solid #e2e2e2;
-  border-left: 1px solid #e2e2e2;
-  border-right: 1px solid #e2e2e2;
-}
-.kotha-menu .navbar .navbar-nav .dropdown > a:after {
-  display: inline-block;
-  margin-left: 5px;
-  font-family: "FontAwesome";
-  font-size: 11px;
-  line-height: 0.9;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-.kotha-menu .navbar .navbar-nav .dropdown .dropdown {
-  position: relative;
-}
-.kotha-menu .navbar .navbar-nav .dropdown .dropdown > a:after {
-  display: inline-block;
-  position: absolute;
-  top: 50%;
-  right: 8px;
-  margin-top: -3px;
-}
-.kotha-menu .top-social-icons {
-  margin-bottom: 0;
-}
-.kotha-menu .top-social-icons li.top-search a {
-  margin-left: 10px;
-}
-.kotha-menu .top-social-icons li a {
-  color: #aaaaaa;
-  display: inline-block;
-  font-size: 13px;
-  font-weight: 700;
-  width: 13px;
-  height: 13px;
-  padding: 20px 0 20px 4px;
-}
-.kotha-menu .top-social-icons li a:hover {
-  color: #da521e;
-}
-.kotha-menu .top-social-icons .active .fa-search:before {
-  content: "\F00D";
-  color: #da521e;
-}
-.kotha-menu .show-search {
-  background: #fff;
-  position: absolute;
-  z-index: 10000;
-  top: 100%;
-  right: 0;
-  padding: 15px;
-  border-top: 3px solid #f26367;
-  box-shadow: 0 2px 7px rgba(0, 0, 0, 0.1);
-  display: none;
-}
-.kotha-menu .show-search input {
-  display: block;
-  font-size: 13px;
-  width: 200px;
-  padding: 10px 13px;
-  border-radius: 0;
-  background: #f4f4f4;
-  font-weight: 300;
-  box-shadow: 0 5px 4px -4px rgba(190, 190, 190, 0.1);
-  border: 1px solid #e8e8e8;
-}
-
-.kotha-menu.left-logo .navbar .navbar-nav {
-  margin-right: 25px;
-  margin-left: 50px;
-}
-
-.kotha-logo h1 {
-  margin: 48px auto 55px;
-}
-
-#video-header {
-  width: 100%;
-  position: relative;
-  min-height: 450px;
-  margin-bottom: 0;
-}
-
-.yt-background {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-  min-height: 500px;
-}
-.yt-background:after {
-  content: "";
-  background: rgba(0, 0, 0, 0.5);
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-  position: absolute;
-  z-index: -1;
-}
-.yt-background .yt-controls {
-  position: absolute;
-  right: 60px;
-  bottom: 50px;
-  display: none;
-}
-.yt-background .yt-controls a {
-  display: inline-block;
-  color: #fff;
-  width: 20px;
-  text-decoration: none;
-}
-
-#logo {
-  text-align: center;
-  padding: 0;
-  position: absolute;
-  z-index: 2;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
-#logo p {
-  color: #fff;
-  font-style: italic;
-  font-size: 18px;
-  letter-spacing: 0.5px;
-}
-
-#img-header {
-  min-height: 450px;
-  background: url(/images/header-fixed-bg.jpg?5e7f18c2ede21291d375b599f6759c7f) no-repeat scroll 100% 100%;
-  background-attachment: fixed;
-  background-size: cover;
-  position: relative;
-  z-index: 1;
-}
-#img-header:after {
-  content: "";
-  background: rgba(0, 0, 0, 0.4);
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-  position: absolute;
-  z-index: -1;
-}
-
-.header-top-area {
-  margin: 45px auto 10px;
-}
-.header-top-area .mega-logo {
-  padding: 30px 0;
-  display: block;
-}
-
 .insta-feed {
   margin: 0;
   padding: 0;
@@ -1682,7 +1452,7 @@ footer .ft-copyright p a:hover {
   margin-bottom: 28px;
 }
 .kotha-sidebar .widget.about-me-widget {
-  background: url(/images/about-me-bg.jpg?01ef928da515416bc7ec61a7806f0843) no-repeat;
+  background: url("../img/about-me-bg.jpg") no-repeat;
   background-size: 100%;
   background-color: #fff;
 }
@@ -1911,7 +1681,7 @@ footer .ft-copyright p a:hover {
 }
 
 .kotha-sidebar.feminine-sidebar .widget.about-me-widget {
-  background: url(/images/fe-about-me-bg.jpg?abb72508f6eec786bfe569072552817c) no-repeat;
+  background: url("../img/fe-about-me-bg.jpg") no-repeat;
   background-size: 100%;
   background-color: #fff;
 }
@@ -1919,7 +1689,11 @@ footer .ft-copyright p a:hover {
 .single-blog {
   background: #fff;
   margin-bottom: 50px;
-  box-shadow: 0 0 2px 0 rgba(51, 51, 51, 0.08), 0 0 2px 0 rgba(51, 51, 51, 0.08);
+  box-shadow: 0 1px 20px 0 rgba(0, 0, 0, 0.08), 0 1px 20px 0 rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+.single-blog:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15), 0 6px 40px rgba(0, 0, 0, 0.15);
 }
 .single-blog .post-thumb img {
   width: 100%;
@@ -2542,7 +2316,7 @@ footer .ft-copyright p a:hover {
 }
 
 .link-post-format {
-  background: url(/images/link-bg.jpg?559a3a80b05b53d80609c2baa56c05c4) no-repeat;
+  background: url("../img/link-bg.jpg") no-repeat;
   background-size: cover;
   position: relative;
 }
@@ -2635,7 +2409,7 @@ footer .ft-copyright p a:hover {
   height: 100%;
   width: 100%;
   position: relative;
-  background: url(/images/comin-soon-bg.jpg?9329f34c233ef4a3d1675b7415feb60e) no-repeat;
+  background: url("../img/comin-soon-bg.jpg") no-repeat;
   background-size: cover;
   display: flex;
   justify-content: center;
@@ -3544,19 +3318,19 @@ p.go-back-home {
   margin: 0 2px 0 0;
 }
 #shopCarousel .carousel-indicators li.one {
-  background: url(/images/bullet-1.jpg?a02f418c79f66303fc7241cc0dc5ce66) no-repeat center center;
+  background: url("../img/bullet-1.jpg") no-repeat center center;
 }
 #shopCarousel .carousel-indicators li.two {
-  background: url(/images/bullet-2.jpg?302cdd483081a522921e063468416e0a) no-repeat center center;
+  background: url("../img/bullet-2.jpg") no-repeat center center;
 }
 #shopCarousel .carousel-indicators li.three {
-  background: url(/images/bullet-3.jpg?aace4502323f0f6aa14c446582842cf6) no-repeat center center;
+  background: url("../img/bullet-3.jpg") no-repeat center center;
 }
 #shopCarousel .carousel-indicators li.four {
-  background: url(/images/bullet-4.jpg?af7d7f8295cbc612cfa56d2ff1cca33c) no-repeat center center;
+  background: url("../img/bullet-4.jpg") no-repeat center center;
 }
 #shopCarousel .carousel-indicators li.five {
-  background: url(/images/bullet-2.jpg?302cdd483081a522921e063468416e0a) no-repeat center center;
+  background: url("../img/bullet-2.jpg") no-repeat center center;
 }
 #shopCarousel .shop-content.text-center img {
   width: 100%;
@@ -3649,7 +3423,7 @@ p.go-back-home {
 }
 
 .kotha-retro {
-  background: url(/images/retro-bg.png?00b489e9e79ee1f888d1f42aeb3c88cb) repeat;
+  background: url("../img/retro-bg.png") repeat;
 }
 .kotha-retro .kotha-menu .menu-content {
   position: relative;
@@ -3720,7 +3494,7 @@ p.go-back-home {
   background: #ede9da;
   margin-bottom: 50px;
   border: 1px solid rgba(51, 51, 51, 0.1);
-  box-shadow: 0 1px 1px rgba(51, 51, 51, 0.1);
+  box-shadow: 0 1px 20px 0 rgba(0, 0, 0, 0.08), 0 1px 20px 0 rgba(0, 0, 0, 0.08);
 }
 .kotha-retro .kotha-sidebar .widget {
   background-color: #ede9da;
