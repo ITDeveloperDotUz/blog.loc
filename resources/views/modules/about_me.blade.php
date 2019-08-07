@@ -1,7 +1,4 @@
-<?php $admin = App\User::find(1); ?>
-<aside class="widget about-me-widget text-center"
-
->
+<aside class="widget about-me-widget text-center">
     <div class="about-me-content">
         <div class="about-me-img">
             <img src="{{ Voyager::image($admin->avatar) }}" alt="" class="img-me img-circle">

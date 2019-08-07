@@ -1,3 +1,9 @@
+<?php
+    $defaultBg = isset($postImg)?$postImg:Voyager::image(setting('site.default_header_bg'));
+    $admin = App\User::find(1);
+?>
+
+
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
@@ -16,110 +22,75 @@
 </head>
 <body>
 <div id="app">
-    <header class="">
-        <h1>Sticky Header Pow!</h1>
-        <nav class="">
-            <a href="">Home</a>
-            <a href="">About</a>
-            <a href="">Gallery</a>
-            <a href="">Contact</a>
-            <div class="container">
-                <div class="">
-                    <!-- Brand and toggle get grouped for better mobile display -->
-                    <div class="navbar-header">
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                    </div>
-                </div>
-
-                <div class="collapse navbar-collapse" id="myNavbar">
-                    {{--<ul class="top-social-icons list-inline float-right">--}}
-                    {{--<li><a href="http://demo.shapedtheme.com/kotha-pro-html/index-material.html#"><i class="fa fa-facebook"></i></a></li>--}}
-                    {{--<li><a href="http://demo.shapedtheme.com/kotha-pro-html/index-material.html#"><i class="fa fa-twitter"></i></a></li>--}}
-                    {{--<li><a href="http://demo.shapedtheme.com/kotha-pro-html/index-material.html#"><i class="fa fa-instagram"></i></a></li>--}}
-                    {{--<li><a href="http://demo.shapedtheme.com/kotha-pro-html/index-material.html#"><i class="fa fa-pinterest"></i></a></li>--}}
-                    {{--<li><a href="http://demo.shapedtheme.com/kotha-pro-html/index-material.html#"><i class="fa fa-google-plus"></i></a></li>--}}
-                    {{--<li class="top-search">--}}
-                    {{--<a href="http://demo.shapedtheme.com/kotha-pro-html/index-material.html#" class="sactive">--}}
-                    {{--<i class="fa fa-search"></i>--}}
-                    {{--</a>--}}
-                    {{--</li>--}}
-                    {{--</ul>--}}
-                    <ul class="nav navbar-nav text-uppercase">
-                        <li class="nav-item dropdown">
-                            <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Home
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li class="dropdown-item"><a href="http://demo.shapedtheme.com/kotha-pro-html/index.html">Home Default</a></li>
-                                <li class="dropdown-item"><a href="http://demo.shapedtheme.com/kotha-pro-html/index-feminine.html">Home Feminine</a></li>
-                                <li class="dropdown-item"><a href="http://demo.shapedtheme.com/kotha-pro-html/index-travel.html">Home Travel</a></li>
-                                <li class="dropdown-item"><a href="http://demo.shapedtheme.com/kotha-pro-html/index-food.html">Home Food</a></li>
-                                <li class="dropdown-item"><a href="http://demo.shapedtheme.com/kotha-pro-html/index-material.html">Home Material</a></li>
-                                <li class="dropdown-item"><a href="http://demo.shapedtheme.com/kotha-pro-html/index-marketing.html">Home Digital Marketing</a></li>
-                                <li class="dropdown-item"><a href="http://demo.shapedtheme.com/kotha-pro-html/index-retro.html">Home Retro Blog</a></li>
-                                <li class="dropdown-item"><a href="http://demo.shapedtheme.com/kotha-pro-html/index-archi.html">Home Architecture</a></li>
-                                <li class="dropdown-item"><a href="http://demo.shapedtheme.com/kotha-pro-html/index-magazine.html">Home Magazine</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Home
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li class="dropdown-item"><a href="http://demo.shapedtheme.com/kotha-pro-html/index.html">Home Default</a></li>
-                                <li class="dropdown-item"><a href="http://demo.shapedtheme.com/kotha-pro-html/index-feminine.html">Home Feminine</a></li>
-                                <li class="dropdown-item"><a href="http://demo.shapedtheme.com/kotha-pro-html/index-travel.html">Home Travel</a></li>
-                                <li class="dropdown-item"><a href="http://demo.shapedtheme.com/kotha-pro-html/index-food.html">Home Food</a></li>
-                                <li class="dropdown-item"><a href="http://demo.shapedtheme.com/kotha-pro-html/index-material.html">Home Material</a></li>
-                                <li class="dropdown-item"><a href="http://demo.shapedtheme.com/kotha-pro-html/index-marketing.html">Home Digital Marketing</a></li>
-                                <li class="dropdown-item"><a href="http://demo.shapedtheme.com/kotha-pro-html/index-retro.html">Home Retro Blog</a></li>
-                                <li class="dropdown-item"><a href="http://demo.shapedtheme.com/kotha-pro-html/index-archi.html">Home Architecture</a></li>
-                                <li class="dropdown-item"><a href="http://demo.shapedtheme.com/kotha-pro-html/index-magazine.html">Home Magazine</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Home
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li class="dropdown-item"><a href="http://demo.shapedtheme.com/kotha-pro-html/index.html">Home Default</a></li>
-                                <li class="dropdown-item"><a href="http://demo.shapedtheme.com/kotha-pro-html/index-feminine.html">Home Feminine</a></li>
-                                <li class="dropdown-item"><a href="http://demo.shapedtheme.com/kotha-pro-html/index-travel.html">Home Travel</a></li>
-                                <li class="dropdown-item"><a href="http://demo.shapedtheme.com/kotha-pro-html/index-food.html">Home Food</a></li>
-                                <li class="dropdown-item"><a href="http://demo.shapedtheme.com/kotha-pro-html/index-material.html">Home Material</a></li>
-                                <li class="dropdown-item"><a href="http://demo.shapedtheme.com/kotha-pro-html/index-marketing.html">Home Digital Marketing</a></li>
-                                <li class="dropdown-item"><a href="http://demo.shapedtheme.com/kotha-pro-html/index-retro.html">Home Retro Blog</a></li>
-                                <li class="dropdown-item"><a href="http://demo.shapedtheme.com/kotha-pro-html/index-archi.html">Home Architecture</a></li>
-                                <li class="dropdown-item"><a href="http://demo.shapedtheme.com/kotha-pro-html/index-magazine.html">Home Magazine</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
+    <header class="" style="background-image: url({{ $defaultBg }})">
+        <h1>Doimo komillikka intil!</h1>
+        <!--Navbar -->
+        <nav class="navbar-expand-md navbar-dark secondary-color lighten-1">
+            <a class="navbar-brand" href="{{ route('home') }}">Navbar</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-555"
+                    aria-controls="navbarSupportedContent-555" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent-555">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Pricing</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-555" data-toggle="dropdown"
+                           aria-haspopup="true" aria-expanded="false">Dropdown
+                        </a>
+                        <div class="dropdown-menu dropdown-secondary" aria-labelledby="navbarDropdownMenuLink-555">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ml-auto nav-flex-icons">
+                    <li class="nav-item">
+                        <a class="nav-link waves-effect waves-light">1
+                            <i class="fa fa-envelope"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item avatar dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-55" data-toggle="dropdown"
+                           aria-haspopup="true" aria-expanded="false">
+                            <img src="{{ Voyager::image($admin->avatar) }}" class="rounded-circle z-depth-0"
+                                 alt="avatar image">
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-lg-right dropdown-secondary"
+                             aria-labelledby="navbarDropdownMenuLink-55">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </li>
+                </ul>
             </div>
-
-
-            <!-- /.container-fluid -->
         </nav>
-        <div class="kotha-logo text-center">
 
-            <h1><a href="{{ route('home') }}"><img src="../img/material-logo.png" alt="kothPro"></a></h1>
-
-        </div>
     </header>
 
     <div class="wrapper">
         @yield('banner')>
-        <div class="container"
+        <div class="container-fluid">
             <div class="row">
                 @yield('content')
                 @include('layouts.sidebar')
             </div>
         </div>
+    </div>
         @include('layouts.instagram_feed')
         @include('layouts.footer')
-    </div>
 </div>
     <script src="{{ asset('js/app.js') }}"></script>
 </body>

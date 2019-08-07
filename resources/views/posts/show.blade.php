@@ -2,11 +2,12 @@
 
 <?php
 $perm2post = TCG\Voyager\Models\Post::first();
+$postImg = Voyager::image($post->image);
 ?>
 
 
 @section('banner')
-    <div class="features-content" style="background-image: url({{ Voyager::image($post->image) }})">
+    <div class="features-content" style="background-image: url({{ $postImg }})">
         <div class="container">
             <div class="row">
                 <div class="col-sm-5 col-sm-offset-7">
