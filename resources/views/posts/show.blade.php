@@ -5,7 +5,6 @@ $perm2post = TCG\Voyager\Models\Post::first();
 $postImg = Voyager::image($post->image);
 ?>
 
-
 @section('banner')
     <div class="features-content" style="background-image: url({{ $postImg }})">
         <div class="container">
@@ -27,7 +26,7 @@ $postImg = Voyager::image($post->image);
 @endsection
 @section('content')
 
-    <div class="col-sm-8">
+    <div class="col-md-8">
         <article class="single-blog">
 
             <div class="post-content">

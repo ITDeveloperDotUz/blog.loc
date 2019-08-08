@@ -1,11 +1,16 @@
-<aside class="widget about-me-widget text-center">
+<aside class="widget about-me-widget text-center" style="background-image: url({{ $defaultBg }});">
     <div class="about-me-content">
         <div class="about-me-img">
-            <img src="{{ Voyager::image($admin->avatar) }}" alt="" class="img-me img-circle">
-            <h2 class="text-uppercase">{{ $admin->name }}</h2>
-            <p>Kotha Smith is an enthusiastic and passionate Story Teller. He loves to do different
-                home-made things
-                and share to the world.</p>
+            @if($user)
+                <img src="{{ Voyager::image($user->avatar) }}" alt="" class="img-me img-circle">
+                <h2 class="text-uppercase">{{ $user->name }}</h2>
+                <p>{{ setting($user->quote) }}</p>
+            @else
+                <img src="{{ Voyager::image(setting('site.logo')) }}" alt="" class="img-me img-circle">
+                <h2 class="text-uppercase">{{ setting('site.title') }}</h2>
+                <p>{{ setting('site.description') }}</p>
+            @endif
+
         </div>
     </div>
     <div class="social-share">

@@ -43380,9 +43380,17 @@ $(document).ready(function () {
       if (winTop >= 30) {
         $("#app").addClass("sticky-header");
         $('.wrapper').addClass('wrapper-padding');
+        $('#head-img').css({
+          'max-height': 50 + 'px',
+          'margin-top': ''
+        });
       } else {
         $("#app").removeClass("sticky-header");
         $('.wrapper').removeClass('wrapper-padding');
+        $('#head-img').css({
+          'max-height': '',
+          'margin-top': -150 + 'px'
+        });
       }
     }
   });

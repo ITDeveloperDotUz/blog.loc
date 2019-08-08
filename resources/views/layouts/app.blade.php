@@ -1,6 +1,7 @@
 <?php
     $defaultBg = isset($postImg)?$postImg:Voyager::image(setting('site.default_header_bg'));
-    $admin = App\User::find(1);
+    $user = auth()->user();
+    $profilePhoto = $user?Voyager::image($user->avatar):Voyager::image(setting('site.logo'));
 ?>
 
 
@@ -26,7 +27,7 @@
         <h1>Doimo komillikka intil!</h1>
         <!--Navbar -->
         <nav class="navbar-expand-md navbar-dark secondary-color lighten-1">
-            <a class="navbar-brand" href="{{ route('home') }}">Navbar</a>
+            <a class="navbar-brand" href="{{ route('home') }}">{{ setting('site.title') }}</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-555"
                     aria-controls="navbarSupportedContent-555" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -45,7 +46,7 @@
                         <a class="nav-link" href="#">Pricing</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-555" data-toggle="dropdown"
+                        <a href="#" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-555" data-toggle="dropdown"
                            aria-haspopup="true" aria-expanded="false">Dropdown
                         </a>
                         <div class="dropdown-menu dropdown-secondary" aria-labelledby="navbarDropdownMenuLink-555">
@@ -57,21 +58,31 @@
                 </ul>
                 <ul class="navbar-nav ml-auto nav-flex-icons">
                     <li class="nav-item">
-                        <a class="nav-link waves-effect waves-light">1
+                        <a href="#" class="nav-link waves-effect waves-light">1
                             <i class="fa fa-envelope"></i>
                         </a>
                     </li>
                     <li class="nav-item avatar dropdown">
-                        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-55" data-toggle="dropdown"
+                        <a href="#" class="nav-link" id="navbarDropdownMenuLink-55" data-toggle="dropdown"
                            aria-haspopup="true" aria-expanded="false">
-                            <img src="{{ Voyager::image($admin->avatar) }}" class="rounded-circle z-depth-0"
+                            <img id="head-img" src="{{ $profilePhoto }}" class="rounded-circle z-depth-0 header-img"
                                  alt="avatar image">
                         </a>
                         <div class="dropdown-menu dropdown-menu-lg-right dropdown-secondary"
                              aria-labelledby="navbarDropdownMenuLink-55">
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <a class="dropdown-item" href="#">Something else here</a>
+
+                            @if($user)
+                                <a class="dropdown-item" href="{{ route('voyager.dashboard') }}">Shaxsiy kabinet</a>
+                                <a class="dropdown-item" href="{{ route('voyager.profile') }}">Mening ma'lumotlarim</a>
+                                <form action="{{ route('voyager.logout') }}" id="logout" method="post">
+                                    @csrf
+                                    <a onclick="$('#logout').submit()" class="dropdown-item" href="#">Chiqish</a>
+                                </form>
+                            @else
+                                <a class="dropdown-item" href="{{ route('voyager.login') }}">Shaxsiy kabinet</a>
+                            @endif
+
+
                         </div>
                     </li>
                 </ul>
@@ -81,7 +92,8 @@
     </header>
 
     <div class="wrapper">
-        @yield('banner')>
+        @yield('banner')
+        <div class="mb-5"></div>
         <div class="container-fluid">
             <div class="row">
                 @yield('content')

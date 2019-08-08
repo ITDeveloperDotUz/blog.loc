@@ -3,7 +3,7 @@
 //@import "compass/css3";
 //@import "compass/reset";
 
-$offset: 600px;
+$offset: 100vh;
 
 @mixin transition($prop){
   -moz-transition: $prop;
@@ -31,7 +31,6 @@ header{
   background-size: cover;
   width: 100%;
   height: $offset;
-
   text-align: center;
   position: fixed;
   top: 0;
@@ -62,8 +61,22 @@ header{
     justify-content: space-between;
     padding: 0.5rem 1rem;
     z-index: 20;
+    @include transition(all .3s ease);
     .navbar-brand {
       line-height: 0;
+    }
+    .header-img {
+      max-height: 150px;
+      @include transition(all 1s ease);
+    }
+    .dropdown-menu a {
+      color: #333;
+      background-color: #fff;
+    }
+
+    .dropdown-menu a:hover {
+      color: #fff0f0 !important;
+      background: $background_color_4 !important;
     }
     @media (max-width: 767.98px) {
       .navbar-nav {

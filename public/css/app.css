@@ -16508,7 +16508,7 @@ p.go-back-home {
   }
 }
 .wrapper {
-  padding-top: 600px;
+  padding-top: 100vh;
   width: unset;
   transition: all 0.5s ease;
 }
@@ -16517,7 +16517,7 @@ header {
   background: #3498db fixed no-repeat 50% 50%;
   background-size: cover;
   width: 100%;
-  height: 600px;
+  height: 100vh;
   text-align: center;
   position: fixed;
   top: 0;
@@ -16545,9 +16545,22 @@ header nav {
   justify-content: space-between;
   padding: 0.5rem 1rem;
   z-index: 20;
+  transition: all 0.3s ease;
 }
 header nav .navbar-brand {
   line-height: 0;
+}
+header nav .header-img {
+  max-height: 150px;
+  transition: all 1s ease;
+}
+header nav .dropdown-menu a {
+  color: #333;
+  background-color: #fff;
+}
+header nav .dropdown-menu a:hover {
+  color: #fff0f0 !important;
+  background: #da521e !important;
 }
 @media (max-width: 767.98px) {
   header nav .navbar-nav {
