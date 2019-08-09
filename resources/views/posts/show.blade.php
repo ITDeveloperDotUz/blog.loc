@@ -9,7 +9,7 @@ $postImg = Voyager::image($post->image);
     <div class="features-content" style="background-image: url({{ $postImg }})">
         <div class="container">
             <div class="row">
-                <div class="col-sm-5 col-sm-offset-7">
+                <div class="col-md-5 col-sm-offset-7">
                     <div class="marketing-promo-box text-center">
                         <a href="http://demo.shapedtheme.com/kotha-pro-html/index-marketing.html" class="promo-tag text-uppercase">Marketing Expert</a>
                         <h2 class="promo-title">

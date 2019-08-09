@@ -39,9 +39,13 @@ header{
   h1{
     font-size: 42px;
     color: #fff;
-    line-height: 230px;
+    
     text-transform: uppercase;
     font-weight: 100;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    background: rgba(0,0,0,.5);
     @include transition(all .3s ease);
   }
   nav{

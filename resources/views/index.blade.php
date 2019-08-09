@@ -1,6 +1,23 @@
 @extends('layouts.app')
 
 @section('content')
+    @foreach($posts as $post)
+        <div class="col-md-3">
+            <div class="single-blog-box" >
+                <a href="{{ route('posts.show', $post->id) }}">
+                    <img src="{{ Voyager::image($post->image) }}" alt="">
+                    <div class="overlay">
+                        <div class="promo-text">
+                            <h5>{{ $post->title }}</h5>
+                            <p>
+                                New post is available
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    @endforeach
     <div class="col-md-8">
         @foreach($posts as $post)
             <article class="single-blog">
