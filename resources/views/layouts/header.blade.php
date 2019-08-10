@@ -10,25 +10,25 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent-555">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Home
+                    <a class="nav-link" href="{{ route('categories.index') }}">Bo'limlar
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Features</a>
+                    <a class="nav-link" href="{{ route('posts.index') }}">Maqolalar</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Pricing</a>
+                    <a class="nav-link" href="{{ route('authors.index') }}">Bloggerlar</a>
                 </li>
-                <li class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-555" data-toggle="dropdown"
-                       aria-haspopup="true" aria-expanded="false">Dropdown
-                    </a>
-                    <div class="dropdown-menu dropdown-secondary" aria-labelledby="navbarDropdownMenuLink-555">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-                </li>
+                {{--<li class="nav-item dropdown">--}}
+                    {{--<a href="#" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-555" data-toggle="dropdown"--}}
+                       {{--aria-haspopup="true" aria-expanded="false">--}}
+                    {{--</a>--}}
+                    {{--<div class="dropdown-menu dropdown-secondary" aria-labelledby="navbarDropdownMenuLink-555">--}}
+                        {{--<a class="dropdown-item" href="#">Action</a>--}}
+                        {{--<a class="dropdown-item" href="#">Another action</a>--}}
+                        {{--<a class="dropdown-item" href="#">Something else here</a>--}}
+                    {{--</div>--}}
+                {{--</li>--}}
             </ul>
 
             <ul class="navbar-nav mr-2 nav-flex-icons">

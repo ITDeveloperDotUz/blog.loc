@@ -21,4 +21,5 @@ Route::group(['prefix' => 'admin'], function () {
 Route::resource('posts', 'PostController');
 Route::post('posts/{string}/search', 'PostController@search')->name('posts.search');
 Route::resource('authors', 'AuthorController');
-Route::resource('comments', 'CommentsController');
+Route::resource('comments', 'CommentController');
+Route::resource('categories', 'CategoryController');

@@ -20,6 +20,14 @@ class Post extends Models\Post
         return $query->where('status', '=', static::PUBLISHED);
     }
 
+    public function getPopular($count){
+        return $this->scopePublished(self::orderBy('hits', 'desc'))->limit($count)->get();
+    }
+
+    public function getLatest($count){
+        return $this->scopePublished(self::orderBy('created_at', 'desc'))->limit($count)->get();
+    }
+
     public function comments(){
         return $this->hasMany('App\Comment');
     }

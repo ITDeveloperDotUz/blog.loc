@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 <?php
-    $perm2post = TCG\Voyager\Models\Post::first();
+    $perm2post = App\Post::first();
 ?>
 
 
@@ -26,19 +26,7 @@
                 <div class="continue-reading text-left text-uppercase">
                     <a href="{{ route('posts.show', $post->id) }}">Continue Reading</a>
                 </div>
-                <div class="post-meta">
-                    <ul class="float-left list-inline author-meta">
-                        <li class="list-inline-item author">By <a href="http://demo.shapedtheme.com/kotha-pro-html/index-material.html#">Jennifer </a></li>
-                        <li class="list-inline-item date"> On February 12, 2017</li>
-                    </ul>
-                    <ul class="float-right list-inline social-share">
-                        <li class="list-inline-item"><a href=""><i class="fa fa-facebook"></i></a></li>
-                        <li class="list-inline-item"><a href=""><i class="fa fa-twitter"></i></a></li>
-                        <li class="list-inline-item"><a href=""><i class="fa fa-pinterest"></i></a></li>
-                        <li class="list-inline-item"><a href=""><i class="fa fa-google-plus"></i></a></li>
-                        <li class="list-inline-item"><a href=""><i class="fa fa-instagram"></i></a></li>
-                    </ul>
-                </div>
+                @include('posts.meta_links')
             </div>
         </article>
     @endcan

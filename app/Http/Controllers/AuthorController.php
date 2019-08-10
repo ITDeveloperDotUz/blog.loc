@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use TCG\Voyager\Http\Controllers\VoyagerBreadController;
 
-class AuthorController extends Controller
+
+class AuthorController extends VoyagerBreadController
 {
     /**
      * Display a listing of the resource.
@@ -21,9 +23,9 @@ class AuthorController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request, $table)
     {
-        //
+        parent::create($request, $table);
     }
 
     /**

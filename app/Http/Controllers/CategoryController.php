@@ -3,9 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Comment;
+use App\Category;
+use App\Quote;
+use TCG\Voyager\Http\Controllers\VoyagerBreadController;
 
-class CommentsController extends Controller
+class CategoryController extends VoyagerBreadController
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +16,9 @@ class CommentsController extends Controller
      */
     public function index()
     {
-        //
+        $quotes = Quote::all();
+        $categories = Category::all();
+        return view('categories.index', compact(['categories', 'quotes']));
     }
 
     /**
@@ -22,9 +26,9 @@ class CommentsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request, $table)
     {
-        //
+        parent::create($request, $table);
     }
 
     /**
@@ -35,12 +39,7 @@ class CommentsController extends Controller
      */
     public function store(Request $request)
     {
-        $comment = new Comment;
-        //dd($request->input());
-        $comment->fill($request->input());
-        $comment->save();
-
-        return redirect()->back();
+        //
     }
 
     /**
@@ -51,7 +50,7 @@ class CommentsController extends Controller
      */
     public function show($id)
     {
-        //
+
     }
 
     /**
