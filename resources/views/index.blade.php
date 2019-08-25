@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+
     @foreach($posts as $post)
         <div class="col-md-3">
             <div class="single-blog-box" >
@@ -19,27 +20,30 @@
         </div>
     @endforeach
     <div class="col-md-8">
-        @foreach($posts as $post)
-            <article class="single-blog">
-                    <div class="post-thumb">
-                        <a href="{{ route('posts.show', $post->id) }}"><img src="{{ Voyager::image($post->image) }}" alt=""></a>
-                    </div>
-                    <div class="post-content">
-                        <div class="entry-header text-left text-uppercase">
-                            <a href="" class="post-cat"></a>
-                            <h2><a href="{{ route('posts.show', $post->id) }}">{{ $post->title }}</a></h2>
+        <div class="row">
+            @foreach($posts as $post)
+                <div class="col-md-6 col-lg-4">
+                    <article class="single-blog post-grid">
+                        <div class="post-thumb">
+                            <a href="{{ route('posts.show', $post->id) }}"><img src="{{ Voyager::image($post->image) }}" alt=""></a>
                         </div>
-                        <div class="entry-content">
-                            <p>{{ $post->excerpt }}...</p>
+                        <div class="post-content">
+                            <div class="entry-header text-left text-uppercase">
+                                <a href="" class="post-cat"></a>
+                                <h2><a href="{{ route('posts.show', $post->id) }}">{{ $post->title }}</a></h2>
+                            </div>
+                            <div class="entry-content">
+                                <p>{{ $post->excerpt }}...</p>
+                            </div>
+                            <div class="continue-reading text-left text-uppercase">
+                                <a href="{{ route('posts.show', $post->id) }}">Continue Reading</a>
+                            </div>
+                            @include('posts.meta_links')
                         </div>
-                        <div class="continue-reading text-left text-uppercase">
-                            <a href="{{ route('posts.show', $post->id) }}">Continue Reading</a>
-                        </div>
-                        @include('posts.meta_links')
-                    </div>
-                </article>
-
-        @endforeach
+                    </article>
+                </div>
+            @endforeach
+        </div>
         <article class="single-blog">
             <div class="post-thumb">
                 <div id="blog-gallery-slider" class="carousel slide" data-ride="carousel">
@@ -107,4 +111,8 @@
             </ul>
         </div>
     </div>
+@endsection
+
+@section('javascript')
+
 @endsection

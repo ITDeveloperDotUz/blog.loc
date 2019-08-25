@@ -4,12 +4,12 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
-require('./bootstrap');
+require('bootstrap');
 
 //window.Vue = require('vue');
 window.$ = require('jquery');
 window.slick = require('slick-carousel');
-window.masonry = require('masonry-layout');
+//window.masonry = require('masonry-layout');
 window.isotope = require('isotope-layout');
 
 /**
@@ -43,6 +43,7 @@ window.isotope = require('isotope-layout');
 $(document).ready(function () {
     "use strict";
     /* === Footer Instagram === */
+
     (function () {
         $('#footer-instagram').not('.slick-initialized').slick({
             infinite: true,
@@ -152,9 +153,6 @@ $(document).ready(function () {
             ]
         });
     }());
-
-
-
     (function () {
         $('.popular-post-slider').not('.slick-initialized').slick({
             infinite: true,

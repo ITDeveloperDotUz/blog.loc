@@ -53,38 +53,6 @@ $border_color_3: #eee;
 $border_color_4: #ddd;
 $border_top_color_1: #fff;
 $border_top_color_2: #333;
-
-/*
-Kotha Pro
-Author: ShapedTheme
-Version: 2.0
-*/
-/* base common css*/
-/*archive css*/
-/*nabvar css*/
-/*header css*/
-/*video background*/
-/*img header bg*/
-/*footer css*/
-/*sidebar css*/
-/*instagram css*/
-/*all blog css */
-/*material blog*/
-/* pagination */
-/* extra page css */
-/* coming soon page*/
-/*contact us*/
-/* portfolio */
-/*gallery page css*/
-/*about page*/
-/*typography*/
-/* 404 page */
-/*testimonial*/
-/*About us 5 page css */
-/*shop page css*/
-/*responsive css */
-/*kotha food*/
-/*# sourceMappingURL=style.css.map */
 .post-cat {
   color: $color_1;
   display: inline-block;
@@ -2309,7 +2277,11 @@ footer {
     }
     .entry-content {
       margin-bottom: 35px;
+      p {
+        
+      }
     }
+
     .continue-reading {
       a {
         border: 1px solid #da521e;

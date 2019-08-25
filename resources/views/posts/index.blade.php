@@ -9,28 +9,33 @@
 @section('content')
 
 <div class="col-md-8">
-    @foreach($posts as $post)
-    @can('browse', $perm2post)
-        <article class="single-blog">
-            <div class="post-thumb">
-                <a href="{{ route('posts.show', $post->id) }}"><img src="{{ Voyager::image($post->image) }}" alt=""></a>
-            </div>
-            <div class="post-content">
-                <div class="entry-header text-left text-uppercase">
-                    <a href="" class="post-cat"></a>
-                    <h2><a href="{{ route('posts.show', $post->id) }}">{{ $post->title }}</a></h2>
+    <div class="row">
+        @foreach($posts as $post)
+            @can('browse', $perm2post)
+                <div class="col-md-6">
+                    <article class="single-blog">
+                        <div class="post-thumb">
+                            <a href="{{ route('posts.show', $post->id) }}"><img src="{{ Voyager::image($post->image) }}" alt=""></a>
+                        </div>
+                        <div class="post-content">
+                            <div class="entry-header text-left text-uppercase">
+                                <a href="" class="post-cat"></a>
+                                <h2><a href="{{ route('posts.show', $post->id) }}">{{ $post->title }}</a></h2>
+                            </div>
+                            <div class="entry-content">
+                                <p>{{ $post->excerpt }}...</p>
+                            </div>
+                            <div class="continue-reading text-left text-uppercase">
+                                <a href="{{ route('posts.show', $post->id) }}">Continue Reading</a>
+                            </div>
+                            @include('posts.meta_links')
+                        </div>
+                    </article>
                 </div>
-                <div class="entry-content">
-                    <p>{{ $post->excerpt }}...</p>
-                </div>
-                <div class="continue-reading text-left text-uppercase">
-                    <a href="{{ route('posts.show', $post->id) }}">Continue Reading</a>
-                </div>
-                @include('posts.meta_links')
-            </div>
-        </article>
-    @endcan
-    @endforeach
+            @endcan
+        @endforeach
+    </div>
+
 
     <article class="single-blog">
         <div class="post-thumb">
