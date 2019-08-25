@@ -50,7 +50,8 @@ class CategoryController extends VoyagerBreadController
      */
     public function show($id)
     {
-
+        $quotes = Quote::all();
+        return view('categories.show', compact('quotes'));
     }
 
     /**

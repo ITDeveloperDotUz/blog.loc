@@ -24,6 +24,7 @@
         "vue-template-compiler": "^2.6.10"
     },
     "dependencies": {
+        "cropperjs": "^1.5.5",
         "font-awesome": "^4.7.0",
         "isotope": "^1.0.0-alpha.3",
         "isotope-layout": "^3.0.6",

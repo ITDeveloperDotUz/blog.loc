@@ -10,9 +10,6 @@
                     <div class="overlay">
                         <div class="promo-text">
                             <h5>{{ $post->title }}</h5>
-                            <p>
-                                New post is available
-                            </p>
                         </div>
                     </div>
                 </a>
@@ -22,7 +19,7 @@
     <div class="col-md-8">
         <div class="row">
             @foreach($posts as $post)
-                <div class="col-md-6 col-lg-4">
+                <div class="col-md-6">
                     <article class="single-blog post-grid">
                         <div class="post-thumb">
                             <a href="{{ route('posts.show', $post->id) }}"><img src="{{ Voyager::image($post->image) }}" alt=""></a>

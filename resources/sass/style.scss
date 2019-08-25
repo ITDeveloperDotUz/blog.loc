@@ -2278,7 +2278,14 @@ footer {
     .entry-content {
       margin-bottom: 35px;
       p {
-        
+        height: 150px;
+        text-indent: 20px;
+        text-align: justify;
+        overflow-y: scroll;
+        &::-webkit-scrollbar {
+          width: 0px;  /* Remove scrollbar space */
+          background: transparent;  /* Optional: just make scrollbar invisible */
+        }
       }
     }
 

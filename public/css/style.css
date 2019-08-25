@@ -1715,6 +1715,18 @@ footer .ft-copyright p a:hover {
 .single-blog .post-content .entry-content {
   margin-bottom: 35px;
 }
+.single-blog .post-content .entry-content p {
+  height: 150px;
+  text-indent: 20px;
+  text-align: justify;
+  overflow-y: scroll;
+}
+.single-blog .post-content .entry-content p::-webkit-scrollbar {
+  width: 0px;
+  /* Remove scrollbar space */
+  background: transparent;
+  /* Optional: just make scrollbar invisible */
+}
 .single-blog .post-content .continue-reading a {
   border: 1px solid #da521e;
   color: #da521e;
