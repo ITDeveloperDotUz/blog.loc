@@ -39,8 +39,9 @@ class CategoryController extends VoyagerBreadController
      */
     public function store(Request $request)
     {
-        //
+        return $request->input();
     }
+
 
     /**
      * Display the specified resource.
@@ -53,6 +54,8 @@ class CategoryController extends VoyagerBreadController
         $quotes = Quote::all();
         return view('categories.show', compact('quotes'));
     }
+
+
 
     /**
      * Show the form for editing the specified resource.

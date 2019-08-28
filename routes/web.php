@@ -23,3 +23,4 @@ Route::post('posts/{string}/search', 'PostController@search')->name('posts.searc
 Route::resource('authors', 'AuthorController');
 Route::resource('comments', 'CommentController');
 Route::resource('categories', 'CategoryController');
+Route::get('categories/{id}/process', 'CategoryController@process');
