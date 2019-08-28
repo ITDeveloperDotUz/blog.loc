@@ -1665,6 +1665,23 @@ footer .ft-copyright p a:hover {
 .single-blog:hover {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15), 0 6px 40px rgba(0, 0, 0, 0.15);
 }
+.single-blog .post-thumb {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+@media (max-width: 576px) {
+  .single-blog .post-thumb {
+    height: 250px;
+  }
+}
+.single-blog .post-thumb a {
+  height: 100%;
+  width: 100%;
+  display: block;
+}
 .single-blog .post-thumb img {
   width: 100%;
 }

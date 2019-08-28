@@ -6,26 +6,28 @@
             @foreach($categories as $cat)
                 <div class="col-md-12">
                     <article class="single-blog post-list">
-                        <div class="media">
-                            <div class="media-left">
-                                <div class="post-thumb">
-                                    <a href="{{ route('categories.show', $cat->id) }}"> <img src="{{ Voyager::image($cat->image) }}" alt=""></a>
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-sm-5 p-0">
+                                    <div class="post-thumb" style="background-image: url({{ Voyager::image($cat->image) }});)">
+                                        <a href="{{ route('categories.show', $cat->id) }}"></a>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="media-body">
-                                <div class="post-content">
-                                    <div class="entry-header text-left text-uppercase">
-                                        <h2><a href="{{ route('categories.show', $cat->id) }}">{{ $cat->name }}</a></h2>
-                                    </div>
-                                    <div class="entry-content">
-                                        <p>{{ $cat->description }}
-                                        </p>
-                                    </div>
-                                    <div class="post-meta">
-                                        <ul class="list-inline author-meta">
-                                            <li class="author">By <a href="http://demo.shapedtheme.com/kotha-pro-html/default-list.html#">Jennifer </a></li>
-                                            <li class="date"> On February 12, 2017</li>
-                                        </ul>
+                                <div class="col-sm-7">
+                                    <div class="post-content">
+                                        <div class="entry-header text-left text-uppercase">
+                                            <h2><a href="{{ route('categories.show', $cat->id) }}">{{ $cat->name }}</a></h2>
+                                        </div>
+                                        <div class="entry-content">
+                                            <p>{{ $cat->description }}
+                                            </p>
+                                        </div>
+                                        <div class="post-meta">
+                                            <ul class="list-inline author-meta">
+                                                <li class="author">By <a href="http://demo.shapedtheme.com/kotha-pro-html/default-list.html#">Jennifer </a></li>
+                                                <li class="date"> On February 12, 2017</li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
