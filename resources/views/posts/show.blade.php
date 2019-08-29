@@ -44,9 +44,8 @@ $postImg = Voyager::image($post->image);
         <div class="row"><!--blog next previous-->
             @if($prevPost)
                 <div class="col-md-6">
-                    <div class="single-blog-box">
+                    <div class="single-blog-box" style="background-image: url({{ Voyager::image($prevPost->image) }})">
                         <a href="{{ route('posts.show', $prevPost->id) }}">
-                            <img src="{{ Voyager::image($prevPost->image) }}" alt="">
                             <div class="overlay">
                                 <div class="promo-text">
                                     <p><i class="float-left fa fa-angle-left"></i></p>
@@ -61,9 +60,8 @@ $postImg = Voyager::image($post->image);
             @endif
             @if($nextPost)
                 <div class="col-md-6">
-                    <div class="single-blog-box">
+                    <div class="single-blog-box" style="background-image: url({{ Voyager::image($nextPost->image) }})">
                         <a href="{{ route('posts.show', $nextPost->id) }}">
-                            <img src="{{ Voyager::image($nextPost->image) }}" alt="">
                             <div class="overlay">
                                 <div class="promo-text">
                                     <p><i class=" float-right fa fa-angle-right"></i></p>

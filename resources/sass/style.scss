@@ -2705,6 +2705,9 @@ footer {
   position: relative;
   text-align: center;
   margin: 30px 0;
+  background-size: cover;
+  background-position: center;
+  height: 150px;
   &:hover {
     .promo-text {
       border: 1px solid #fff;
@@ -2754,7 +2757,6 @@ footer {
       color: $color_3;
       margin-top: 0;
       font-size: 16px;
-      line-height: 11px;
     }
     i {
       padding: 0 40px;

@@ -2077,6 +2077,9 @@ footer .ft-copyright p a:hover {
   position: relative;
   text-align: center;
   margin: 30px 0;
+  background-size: cover;
+  background-position: center;
+  height: 150px;
 }
 .single-blog-box:hover .promo-text {
   border: 1px solid #fff;
@@ -2115,7 +2118,6 @@ footer .ft-copyright p a:hover {
   color: #fff;
   margin-top: 0;
   font-size: 16px;
-  line-height: 11px;
 }
 .single-blog-box .promo-text i {
   padding: 0 40px;

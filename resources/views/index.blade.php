@@ -2,20 +2,23 @@
 
 @section('content')
 
-    @foreach($posts as $post)
-        <div class="col-md-3">
-            <div class="single-blog-box" >
-                <a href="{{ route('posts.show', $post->id) }}">
-                    <img src="{{ Voyager::image($post->image) }}" alt="">
-                    <div class="overlay">
-                        <div class="promo-text">
-                            <h5>{{ $post->title }}</h5>
-                        </div>
+    <div class="container-fluid">
+        <div class="row">
+            @foreach($posts as $post)
+                <div class="col-md-3">
+                    <div class="single-blog-box" style="background-image: url({{ Voyager::image($post->image) }})">
+                        <a href="{{ route('posts.show', $post->id) }}">
+                            <div class="overlay">
+                                <div class="promo-text">
+                                    <h5>{{ $post->title }}</h5>
+                                </div>
+                            </div>
+                        </a>
                     </div>
-                </a>
-            </div>
+                </div>
+            @endforeach
         </div>
-    @endforeach
+    </div>
     <div class="col-md-8">
         <div class="row">
             @foreach($posts as $post)
