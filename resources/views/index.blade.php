@@ -4,13 +4,13 @@
 
     <div class="container-fluid">
         <div class="row">
-            @foreach($posts as $post)
+            @foreach($topPosts as $tpost)
                 <div class="col-md-3">
-                    <div class="single-blog-box" style="background-image: url({{ Voyager::image($post->image) }})">
-                        <a href="{{ route('posts.show', $post->id) }}">
+                    <div class="single-blog-box" style="background-image: url({{ Voyager::image($tpost->image) }})">
+                        <a href="{{ route('posts.show', $tpost->id) }}">
                             <div class="overlay">
                                 <div class="promo-text">
-                                    <h5>{{ $post->title }}</h5>
+                                    <h5>{{ $tpost->title }}</h5>
                                 </div>
                             </div>
                         </a>
@@ -24,8 +24,8 @@
             @foreach($posts as $post)
                 <div class="col-md-6">
                     <article class="single-blog post-grid">
-                        <div class="post-thumb">
-                            <a href="{{ route('posts.show', $post->id) }}"><img src="{{ Voyager::image($post->image) }}" alt=""></a>
+                        <div class="post-thumb thumb-post" style="background-image: url({{ Voyager::image($post->image) }})">
+                            <a href="{{ route('posts.show', $post->id) }}"></a>
                         </div>
                         <div class="post-content">
                             <div class="entry-header text-left text-uppercase">

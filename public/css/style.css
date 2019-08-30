@@ -1688,6 +1688,9 @@ footer .ft-copyright p a:hover {
 .single-blog .post-thumb iframe {
   width: 100%;
 }
+.single-blog .thumb-post {
+  height: 250px;
+}
 .single-blog .post-content {
   overflow: hidden;
   padding: 40px;
