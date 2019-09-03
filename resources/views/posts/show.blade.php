@@ -2,24 +2,24 @@
 
 <?php
 $perm2post = TCG\Voyager\Models\Post::first();
-$postImg = Voyager::image($post->image);
+$pageBg = Voyager::image($post->image);
 ?>
 
 @section('banner')
-    <div class="features-content" style="background-image: url({{ $postImg }})">
+    <div class="features-content" style="background-image: url({{ $pageBg }})">
         <div class="container">
             <div class="row">
-                <div class="col-md-5 col-sm-offset-7">
-                    <div class="marketing-promo-box text-center">
-                        <a href="http://demo.shapedtheme.com/kotha-pro-html/index-marketing.html" class="promo-tag text-uppercase">Marketing Expert</a>
-                        <h2 class="promo-title">
-                            <a href="http://demo.shapedtheme.com/kotha-pro-html/index-marketing.html">How to Get Customers Without
-                                Spending Any Money</a>
-                        </h2>
-                        <p class="promo-subtitle">LET ME SHOW YOU HOW</p>
-                        <a href="http://demo.shapedtheme.com/kotha-pro-html/index-marketing.html" class="btn promo-btn text-uppercase">Start Here</a>
-                    </div>
-                </div>
+                {{--<div class="col-md-5 col-sm-offset-7">--}}
+                    {{--<div class="marketing-promo-box text-center">--}}
+                        {{--<a href="http://demo.shapedtheme.com/kotha-pro-html/index-marketing.html" class="promo-tag text-uppercase">Marketing Expert</a>--}}
+                        {{--<h2 class="promo-title">--}}
+                            {{--<a href="http://demo.shapedtheme.com/kotha-pro-html/index-marketing.html">How to Get Customers Without--}}
+                                {{--Spending Any Money</a>--}}
+                        {{--</h2>--}}
+                        {{--<p class="promo-subtitle">LET ME SHOW YOU HOW</p>--}}
+                        {{--<a href="http://demo.shapedtheme.com/kotha-pro-html/index-marketing.html" class="btn promo-btn text-uppercase">Start Here</a>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
             </div>
         </div>
     </div>
@@ -31,7 +31,7 @@ $postImg = Voyager::image($post->image);
 
             <div class="post-content">
                 <div class="entry-header text-center text-uppercase">
-                    <a href="{{ route('posts.show', $post->id) }}" class="post-cat">{{ $post->category->name }}</a>
+                    <a href="{{ route('categories.show', $post->category->id) }}" class="post-cat">{{ $post->category->name }}</a>
                     <h2>{{ $post->title }}</h2>
                 </div>
                 <div class="entry-content">

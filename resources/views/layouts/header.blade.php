@@ -1,5 +1,4 @@
 <header class="" style="background-image: url({{ $defaultBg }})">
-    <h1>Doimo komillikka intil!</h1>
     <!--Navbar -->
     <nav class="navbar-expand-md navbar-dark secondary-color lighten-1">
         <a class="navbar-brand" href="{{ route('home') }}">{{ setting('site.title') }}</a>

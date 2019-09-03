@@ -1691,6 +1691,9 @@ footer .ft-copyright p a:hover {
 .single-blog .thumb-post {
   height: 250px;
 }
+.single-blog .post-header {
+  background: #da521e;
+}
 .single-blog .post-content {
   overflow: hidden;
   padding: 40px;
@@ -1735,13 +1738,13 @@ footer .ft-copyright p a:hover {
 .single-blog .post-content .entry-content {
   margin-bottom: 35px;
 }
-.single-blog .post-content .entry-content p {
+.single-blog .post-content .entry-content p.entry-p {
   height: 150px;
   text-indent: 20px;
   text-align: justify;
   overflow-y: scroll;
 }
-.single-blog .post-content .entry-content p::-webkit-scrollbar {
+.single-blog .post-content .entry-content p.entry-p::-webkit-scrollbar {
   width: 0px;
   /* Remove scrollbar space */
   background: transparent;

@@ -1,5 +1,5 @@
 <?php
-    $defaultBg = isset($postImg)?$postImg:Voyager::image(setting('site.default_header_bg'));
+    $defaultBg = isset($pageBg)?$pageBg:Voyager::image(setting('site.default_header_bg'));
     $user = auth()->user();
     $profilePhoto = $user?Voyager::image($user->avatar):Voyager::image(setting('site.logo'));
 ?>
@@ -24,6 +24,7 @@
 <body>
 <div id="app">
     @include('layouts.header')
+
     <div class="wrapper">
         @yield('banner')
         <div class="mb-5"></div>

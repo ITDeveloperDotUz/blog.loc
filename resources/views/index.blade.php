@@ -23,24 +23,7 @@
         <div class="row">
             @foreach($posts as $post)
                 <div class="col-md-6">
-                    <article class="single-blog post-grid">
-                        <div class="post-thumb thumb-post" style="background-image: url({{ Voyager::image($post->image) }})">
-                            <a href="{{ route('posts.show', $post->id) }}"></a>
-                        </div>
-                        <div class="post-content">
-                            <div class="entry-header text-left text-uppercase">
-                                <a href="" class="post-cat"></a>
-                                <h2><a href="{{ route('posts.show', $post->id) }}">{{ $post->title }}</a></h2>
-                            </div>
-                            <div class="entry-content">
-                                <p>{{ $post->excerpt }}...</p>
-                            </div>
-                            <div class="continue-reading text-left text-uppercase">
-                                <a href="{{ route('posts.show', $post->id) }}">Continue Reading</a>
-                            </div>
-                            @include('posts.meta_links')
-                        </div>
-                    </article>
+                    @include('posts.layout')
                 </div>
             @endforeach
         </div>
