@@ -8,6 +8,7 @@ use App\Post;
 use App\User;
 
 
+
 class SiteController extends Controller
 {
     public function index(){

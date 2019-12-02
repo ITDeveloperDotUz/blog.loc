@@ -12,11 +12,11 @@ $latests = $latest_posts->getLatest(5);
         @foreach($latests as $latest)
             <li class="media">
                 <div class="media-left">
-                    <a href="{{ route('posts.show', $latest->id) }}" class="popular-img"><img src="{{ Voyager::image($latest->image) }}" alt="">
+                    <a href="{{ route('posts.show', $latest->slug) }}" class="popular-img"><img src="{{ Voyager::image($latest->image) }}" alt="">
                     </a>
                 </div>
                 <div class="latest-post-content">
-                    <h2 class="text-uppercase"><a href="{{ route('posts.show', $latest->id) }}">{{ $latest->title }}</a></h2>
+                    <h2 class="text-uppercase"><a href="{{ route('posts.show', $latest->slug) }}">{{ $latest->title }}</a></h2>
                     <p>{{ $latest->created_at->format('Y-m-d') }}</p>
                 </div>
             </li>

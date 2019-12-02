@@ -71,7 +71,7 @@
   z-index: 1;
   &:after {
     content: "";
-    @include black(0.4);
+
     height: 100%;
     width: 100%;
     top: 0;

@@ -1,9 +1,14 @@
-@extends('layouts.app')
-
 <?php
 $perm2post = TCG\Voyager\Models\Post::first();
 $pageBg = Voyager::image($post->image);
+$file = (json_decode($post->file)[0]);
+$link = Storage::disk(config('voyager.storage.disk'))->url(isset($file->download_link)?$file->download_link:'');
 ?>
+@extends('layouts.app')
+@section('post_meta')
+    @include('posts.post_meta')
+@endsection
+
 
 @section('banner')
     <div class="features-content" style="background-image: url({{ $pageBg }})">
@@ -31,12 +36,13 @@ $pageBg = Voyager::image($post->image);
 
             <div class="post-content">
                 <div class="entry-header text-center text-uppercase">
-                    <a href="{{ route('categories.show', $post->category->id) }}" class="post-cat">{{ $post->category->name }}</a>
+                    <a href="{{ route('categories.show', $post->category->slug) }}" class="post-cat">{{ $post->category->name }}</a>
                     <h2>{{ $post->title }}</h2>
                 </div>
                 <div class="entry-content">
                     {!! $post->body !!}
                 </div>
+                <a href="{{ $link }}" class="btn btn-success"><i class="fa fa-download"></i> Yuklab olish</a>
                 @include('posts.meta_links')
             </div>
         </article>
@@ -45,7 +51,7 @@ $pageBg = Voyager::image($post->image);
             @if($prevPost)
                 <div class="col-md-6">
                     <div class="single-blog-box" style="background-image: url({{ Voyager::image($prevPost->image) }})">
-                        <a href="{{ route('posts.show', $prevPost->id) }}">
+                        <a href="{{ route('posts.show', $prevPost->slug) }}">
                             <div class="overlay">
                                 <div class="promo-text">
                                     <p><i class="float-left fa fa-angle-left"></i></p>
@@ -61,7 +67,7 @@ $pageBg = Voyager::image($post->image);
             @if($nextPost)
                 <div class="col-md-6">
                     <div class="single-blog-box" style="background-image: url({{ Voyager::image($nextPost->image) }})">
-                        <a href="{{ route('posts.show', $nextPost->id) }}">
+                        <a href="{{ route('posts.show', $nextPost->slug) }}">
                             <div class="overlay">
                                 <div class="promo-text">
                                     <p><i class=" float-right fa fa-angle-right"></i></p>

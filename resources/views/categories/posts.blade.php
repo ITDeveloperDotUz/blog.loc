@@ -1,5 +1,5 @@
 <div class="single-blog post-grid card">
-    <a href="{{ route('posts.show', $post->id) }}">
+    <a href="{{ route('posts.show', $post->slug) }}">
         <div class="card-header post-header text-white">
             <h4><strong>{{ $post->title }}</strong></h4>
         </div>

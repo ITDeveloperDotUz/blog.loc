@@ -23,5 +23,7 @@ return [
     'psychology' => 'Psixologiya',
     'economics' => 'Iqtisodiyot',
     'politics' => 'Siyosat',
+    'ratings' => 'Reytinglar',
+    'statistics' => 'Statistika',
 
 ];

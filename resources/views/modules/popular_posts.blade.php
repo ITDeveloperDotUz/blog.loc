@@ -11,10 +11,10 @@
     <ul>
         @foreach($populars as $popular)
             <li>
-                <a href="{{ route('posts.show', $popular->id) }}" class="popular-img"><img src="{{ Voyager::image($popular->image) }}" alt="">
+                <a href="{{ route('posts.show', $popular->slug) }}" class="popular-img"><img src="{{ Voyager::image($popular->image) }}" alt="">
                 </a>
                 <div class="p-content">
-                    <h4><a href="{{ route('posts.show', $popular->id) }}" class="text-uppercase">{{ $popular->title }}</a></h4>
+                    <h4><a href="{{ route('posts.show', $popular->slug) }}" class="text-uppercase">{{ $popular->title }}</a></h4>
                     <span class="p-date"><i class="fa fa-calendar"></i> Sana: {{ $popular->created_at->format('Y-m-d') }}</span><br>
                     <span class="p-date"><i class="fa fa-user"></i> Muallif: {{ $popular->authorId->name }}</span><br>
                     <span class="p-date"><i class="fa fa-eye"></i> O'qildi: {{ $popular->hits }}</span>

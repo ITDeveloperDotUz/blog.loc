@@ -10,12 +10,12 @@
         @foreach($results as $post)
             <article class="single-blog">
                 <div class="post-thumb">
-                    <a href="{{ route('posts.show', $post->id) }}"> <img src="{{ Voyager::image($post->image) }}" alt=""></a>
+                    <a href="{{ route('posts.show', $post->slug) }}"> <img src="{{ Voyager::image($post->image) }}" alt=""></a>
                 </div>
                 <div class="post-content">
                     <div class="entry-header text-left text-uppercase">
-                        <a href="{{ $post->id }}" class="post-cat">{{ $post->category->name }}</a>
-                        <h2><a href="{{ route('posts.show', $post->id) }}">{{ $post->title }}</a></h2>
+                        <a href="{{ route('posts.show', $post->category->slug) }}" class="post-cat">{{ $post->category->name }}</a>
+                        <h2><a href="{{ route('posts.show', $post->slug) }}">{{ $post->title }}</a></h2>
                     </div>
                     <div class="entry-content">
                         <p>{{ $post->excerpt }}

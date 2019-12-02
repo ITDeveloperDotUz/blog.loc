@@ -10,10 +10,17 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>{{ setting('site.title') }}</title>
-    <link rel="icon" href="/favicon.png">
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    <title>{{ setting('site.title') }}</title>
+
+    @yield('post_meta')
+
+
+
+
+
+    <link rel="icon" href="/favicon.png">
+
     <!-- Fonts -->
 
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">

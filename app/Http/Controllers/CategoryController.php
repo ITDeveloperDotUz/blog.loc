@@ -52,7 +52,7 @@ class CategoryController extends VoyagerBreadController
     public function show($id)
     {
         $quotes = Quote::all();
-        $category = Category::find($id);
+        $category = Category::where('slug',$id)->first();
         return view('categories.show', compact([
             'quotes', 'category'
         ]));

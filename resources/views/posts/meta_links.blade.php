@@ -9,6 +9,5 @@
         <li class="list-inline-item"><a href="https://instagram/betbe4"><i class="fa fa-instagram"></i></a></li>
         <li class="list-inline-item"><a href="mailto://contact@betbe4.uz"><i class="fa fa-envelope"></i></a></li>
         <li class="list-inline-item"><a href="https://t.me/betbe4"><i class="fa fa-telegram"></i></a></li>
-
     </ul>
 </div>

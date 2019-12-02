@@ -61,9 +61,9 @@ class PostController extends VoyagerBreadController
     {
 
 
-        $post = Post::where('id', $id)->first();
-        $nextPost = Post::where('id', $id+1)->first();
-        $prevPost = Post::where('id', $id-1)->first();
+        $post = Post::where('slug', $id)->first();
+        $nextPost = Post::where('id', $post->id+1)->first();
+        $prevPost = Post::where('id', $post->id-1)->first();
         $quotes = Quote::all();
 
         $req = Request();
